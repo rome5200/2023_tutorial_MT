@@ -2,22 +2,15 @@
 
 int main() {
 	char str[4][20];
-	char major[20], grade[20], number[20], name[20];
 
 	printf("학과 : ");
-	scanf_s("%s", major, sizeof(major));
+	scanf_s("%s", str[0], 20);
 	printf("학년 : ");
-	scanf_s("%s", grade, sizeof(grade));
+	scanf_s("%s", str[1], 20);
 	printf("학번 : ");
-	scanf_s("%s", number, sizeof(number));
+	scanf_s("%s", str[2], 20);
 	printf("이름 : ");
-	scanf_s("%s", name, sizeof(name));
-
-	char* ptr[4] = { major, grade, number, name };
-
+	scanf_s("%s", str[3], 20);
 	for (int i = 0; i < 4; i++)
-		str[i][0] = *ptr[i];
-	
-	for (int i = 0; i < 4; i++)
-		printf("%s\n", str[i]);
+		printf("%s ", str[i]);
 }
